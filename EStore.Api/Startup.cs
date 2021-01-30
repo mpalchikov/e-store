@@ -7,8 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,8 +24,9 @@ namespace EStore.Api
         {
             services.AddMediatR(typeof(CreateCategoryCommand));
 
+            services.AddTransient<IDbConnection>(c => new NpgsqlConnection("User ID=postgres;Password=postgres;Host=localhost;Port=5432;Database=estore;"));
             services.AddTransient<ICategoryRepository, CategoryRepository>();
-
+            
             services.AddControllers();
         }
 

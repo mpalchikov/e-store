@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EStore.Catalog.Api\EStore.Catalog.Api.csproj" />
+    <ProjectReference Include="..\EStore.Catalog.Data\EStore.Catalog.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -22,7 +22,9 @@ namespace EStore.Catalog.Data.Repositories
         public async Task Save(Category category)
         {
             var sql = @"insert into categories (id, title, description, parentCategoryId) 
-                        values (@id, @title, @description, @parentCategoryId)";
+                        values (@id, @title, @description, @parentCategoryId)
+                        on conflict (id) do update
+                        set title = excluded.title, description = excluded.description, parentCategoryId = excluded.parentCategoryId";
 
             await _connection.ExecuteAsync(sql, category);                  
         }

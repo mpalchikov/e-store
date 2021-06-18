@@ -22,17 +22,28 @@ namespace EStore.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             services.AddMediatR(typeof(CreateCategoryCommand));
 
             services.AddTransient<IDbConnection>(c => new NpgsqlConnection("User ID=postgres;Password=postgres;Host=localhost;Port=5432;Database=estore;"));
             services.AddTransient<ICategoryRepository, CategoryRepository>();
-            
+            services.AddTransient<IProductRepository, ProductRepository>();
+
             services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(builder =>
+            {
+                builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

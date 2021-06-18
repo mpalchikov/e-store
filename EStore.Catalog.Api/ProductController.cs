@@ -1,6 +1,7 @@
 ﻿using EStore.Catalog.Api.Models;
 using EStore.Catalog.Commands.CreateProduct;
 using EStore.Catalog.Commands.UpdateProduct;
+using EStore.Catalog.Queries.GetProduct;
 using EStore.Catalog.Queries.GetProducts;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -21,11 +22,25 @@ namespace EStore.Catalog.Api
         }
 
         [HttpGet, Route("api/products")]
-        public async Task<ActionResult> Get()
+        public async Task<ActionResult> GetProducts()
         {
             var query = new GetProductsQuery();
+
             var products = await _mediator.Send(query);
+
             return Ok(products);
+        }
+
+        [HttpGet, Route("api/products/{id}")]
+        public async Task<ActionResult> GetProducts(Guid id)
+        {
+            var query = new GetProductQuery { 
+                ProductId = id
+            };
+
+            var product = await _mediator.Send(query);
+
+            return Ok(product);
         }
 
         [HttpPost, Route("api/products")]

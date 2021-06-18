@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EStore.Catalog.Queries.GetProducts
+namespace EStore.Catalog.Queries
 {
     public class ProductDto
     {

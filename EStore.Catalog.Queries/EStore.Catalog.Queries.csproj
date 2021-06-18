@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
     <PackageReference Include="MediatR" Version="9.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\EStore.Domain\EStore.Catalog.Domain.csproj" />
   </ItemGroup>
 
 </Project>

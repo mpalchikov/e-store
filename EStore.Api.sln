@@ -11,9 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{752F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EStore.Catalog.Api", "EStore.Catalog.Api\EStore.Catalog.Api.csproj", "{07137459-8464-4209-B7B2-6809457BB625}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EStore.Catalog.Commands", "EStore.Catalog.Commands\EStore.Catalog.Commands.csproj", "{9F6660E4-978B-4063-9179-ABFC64BCAE7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EStore.Catalog.Commands", "EStore.Catalog.Commands\EStore.Catalog.Commands.csproj", "{9F6660E4-978B-4063-9179-ABFC64BCAE7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EStore.Catalog.Data", "EStore.Catalog.Data\EStore.Catalog.Data.csproj", "{21E549C6-801E-418F-9CC1-71270A706827}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EStore.Catalog.Data", "EStore.Catalog.Data\EStore.Catalog.Data.csproj", "{21E549C6-801E-418F-9CC1-71270A706827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EStore.Catalog.Queries", "EStore.Catalog.Queries\EStore.Catalog.Queries.csproj", "{4A00E461-794D-46AD-99BB-1FE0FF939978}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{21E549C6-801E-418F-9CC1-71270A706827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21E549C6-801E-418F-9CC1-71270A706827}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21E549C6-801E-418F-9CC1-71270A706827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A00E461-794D-46AD-99BB-1FE0FF939978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A00E461-794D-46AD-99BB-1FE0FF939978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A00E461-794D-46AD-99BB-1FE0FF939978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A00E461-794D-46AD-99BB-1FE0FF939978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{07137459-8464-4209-B7B2-6809457BB625} = {752F7580-757C-487C-B0B4-5C9692677E18}
 		{9F6660E4-978B-4063-9179-ABFC64BCAE7D} = {752F7580-757C-487C-B0B4-5C9692677E18}
 		{21E549C6-801E-418F-9CC1-71270A706827} = {752F7580-757C-487C-B0B4-5C9692677E18}
+		{4A00E461-794D-46AD-99BB-1FE0FF939978} = {752F7580-757C-487C-B0B4-5C9692677E18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF5A1E23-7547-4290-9402-EC53E2EFC6A1}

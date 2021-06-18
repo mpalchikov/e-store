@@ -1,6 +1,7 @@
 using EStore.Catalog.Commands.CreateCategory;
 using EStore.Catalog.Data.Repositories;
 using EStore.Catalog.Domain.Contracts;
+using EStore.Catalog.Queries.GetProducts;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,6 +26,7 @@ namespace EStore.Api
             services.AddCors();
 
             services.AddMediatR(typeof(CreateCategoryCommand));
+            services.AddMediatR(typeof(GetProductsQuery));
 
             services.AddTransient<IDbConnection>(c => new NpgsqlConnection("User ID=postgres;Password=postgres;Host=localhost;Port=5432;Database=estore;"));
             services.AddTransient<ICategoryRepository, CategoryRepository>();
